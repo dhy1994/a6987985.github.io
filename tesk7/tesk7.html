@@ -1,0 +1,302 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<head>
+    <title>任务六</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+    //下拉菜单
+        var $$ = function (id) {
+	return document.getElementsByClassName(id); 
+	} 
+	window.onload = function () { 
+	
+	var btnSelect = $$("select-btn"); 
+
+	for(var i=0; i<btnSelect.length;i++)
+	{
+		var curSelect = btnSelect[i].getElementsByTagName("span")[0]; 
+	var oSelect = btnSelect[i].getElementsByTagName("select")[0]; 
+	var aOption = btnSelect[i].getElementsByTagName("option");
+	oSelect.onchange = function () { 
+	var text=this.options[this.selectedIndex].text; 
+	this.previousElementSibling.innerHTML = text; 
+		} 
+	}
+	
+	}
+    //返回顶部
+
+        var time = 0;
+
+        function returnTop() {
+            window.scrollBy(0, -150);
+            if (document.body.scrollTop > 0) {
+                time = setTimeout('returnTop()', 50);
+            }
+        }
+
+
+
+    </script>
+</head>
+<body class=”main-body“>
+	<div id = "main">
+		<div class = "title">
+			<div class = "nav-left">
+				<div class = "nav-left-left"><img class = "nav-logo"src="nav-logo.png"></div>
+				<div class = "nav-text">新世界</div>
+			</div>
+			<div class = "nav-right">
+			  <ul class = "mav-ul">
+				<li><a class = "on" href="">首页</a>
+                <div class = "bottom-color"></div>
+                </li>
+				<li><a href="">最新活动</a><div class = "bottom-color"></div></li>
+				<li><a href="">项目介绍</a><div class = "bottom-color"></div></li>
+				<li><a href="">爱心社区</a><div class = "bottom-color"></div></li>
+				<li><a href="">关于我们</a><div class = "bottom-color"></div></li>
+				<li >
+                    <div class="login-li">
+					<img src="nav-user.png">
+                    </div>
+					<a class ="login"href=" ">登陆</a>
+                    
+				</li>
+                
+			  </ul>
+               <div class = "nav-color"></div>
+			</div>
+			
+		</div>
+        <div class="title-big">
+             <img class = "big-img" src="banner.jpg">
+             <div class = "text1">
+             <p class="text-p">Time of new life</p>
+             <P class="text-p1">新时代，年轻的人们让我们一起</p>
+             <P class="text-p2">体验新生活，享受新生活</p>
+             </div>
+             <div class="start-bt">
+             <a class = "start-bt-a"href="">点击开始</a>
+             </div>
+         </div>
+           <div class="choose">
+              <div class="choose1">
+                 <img class="choose-img1"src="advancement-1.png">
+                 <div class= "choose-text1">
+                     <p class="choose-text">打造全世界景观，让你更爱你的生活</p>
+                 </div>
+              </div>
+              <div class="choose2">
+                 <img class="choose-img1"src="advancement-2.png">
+                 <div class= "choose-text1">
+                     <p class="choose-text">丰富多彩的公益活动，发挥新世界的主人公意识</p>
+                 </div>
+              </div>
+              <div class="choose3">
+                 <img class="choose-img1"src="advancement-3.png">
+                 <div class= "choose-text1">
+                    <p class="choose-text">时尚的新理念，超前体验未知的生活</p>
+                 </div>
+              </div>
+              <div class="choose4">
+                  <img class="choose-img1"src="advancement-4.png">
+                  <div class= "choose-text1">
+                      <p class="choose-text">完善的培养机制，培养你全心的世界观</p>
+                  </div>
+              </div>
+           </div>
+           <div class="page-div3">
+              <img class="div3-img" src="question-logo.png">
+              <p class ="div3-text">关于新世界，你不知道的还有什么？</p>
+           </div>
+           <div class="page-div4">
+                
+                <div class="page-div4-1">
+                    <p class="div4-text1">查找新世界城市活动信息</p>
+                    <p class="div4-text2">每个城市有不同的活动信息，请自主查询您所需要查询的城市</p>
+                </div>
+                <div class = "page-div4-2">
+                      <div class="div4-2-1">
+                      <a class="select-btn" id="select_btn">
+                      <img class="select-arrow" src="select-bg.png">
+                      <span class="cur-select">请选择</span>
+                      <select size="1" class="select">
+                         <option>中国</option>
+                         <option>美国</option>
+                         <option>日本</option>
+                         <option>英国</option>
+                      </select>
+                      </a>
+                      </div>
+                      <div class="div4-2-1">
+                      <a class="select-btn" id="select_btn">
+                      <img class="select-arrow" src="select-bg.png">
+                      <span class="cur-select">请选择</span>
+                      <select size="1" class="select">
+                         <option>北京市</option>
+                         <option>天津市</option>
+                         <option>河北省</option>
+                         <option>辽宁省</option>
+                         <option>上海市</option>
+                         <option>河南省</option>
+                         <option>陕西省</option>
+                         <option>山西省</option>
+                      </select>
+                      </a>
+                      </div>
+                      <div class="div4-2-1">
+                      <a class="select-btn" id="select_btn">
+                      <img class="select-arrow" src="select-bg.png">
+                      <span class="cur-select">请选择</span>
+                      <select size="1" class="select">
+                         <option>北京市</option>
+                         <option>天津市</option>
+                         <option>河北省</option>
+                         <option>辽宁省</option>
+                         <option>上海市</option>
+                         <option>河南省</option>
+                         <option>陕西省</option>
+                         <option>山西省</option>
+                      </select>
+                      </a>
+                      </div>
+                      <div class="div4-2-1">
+                      <a class="div4-2-text" href="">搜    索</a>
+                      </div>
+                
+                </div>
+           </div>
+        <div class="page-div5">
+            <div class="page-div5-1">
+                <img class="div5-img1" src="beijingact.jpg">
+
+                <span class="div5-text1">北京活动</span>
+                <br>
+                <span class="div5-text2">新社区大联盟</span>
+            </div>
+            <div class="page-div5-1">
+                <span class="div5-text-sh">上   海   活   动</span>
+                <br>
+                <span class="div5-text2">夜上海的新夜景探索</span>
+                <img class="div5-img1" src="shanghaiact.jpg">
+
+
+            </div>
+            <div class="page-div5-1">
+                <img class="div5-img1" src="shenzhenact.jpg">
+
+                <span class="div5-text1">深圳活动</span>
+                <br>
+                <span class="div5-text2">全新海岸线观点站</span>
+            </div>
+            <div class="page-div5-1">
+                <img class="div5-img1" src="xianggangact.jpg">
+
+                <span class="div5-text1">香港活动</span>
+                <br>
+                <span class="div5-text2">奢侈消费大派送</span>
+            </div>
+
+        </div>
+        <div class="page-div6">
+            <div class="div6-1">
+                <img class="div6-img-left" src="ad1.jpg">
+            </div>
+            <div class="div6-2">
+                <span class="div6-2-text1">新世界/01</span><br>
+                <span class="div6-2-text2">新世界新世界新世界新世界新世界新世界新世新世界新世界新世界新世界界新
+                    世界新世界新世界新世界新世界新世界新世界新世界新世界</span>
+                <a class="div6-2-a" href="" >更多详情</a>
+            </div>
+        </div>
+        <div class="page-div7">
+            <div class="div7-1">
+                <span class="div7-text">新时代</span><br>
+                <span class="div7-text1">关于爱生活的我们</span><br>
+                <a class="div7-a" href="">查看更多</a>
+            </div>
+            <div class="div7-2">
+                <span class="div7-text2">新时代</span><br>
+                <span class="div7-text3">关于爱生活的我们</span><br>
+                <a class="div7-a1" href="">查看更多</a>
+            </div>
+            <div class="div7-3"></div>
+        </div>
+        <div class="page-div8">
+            <div class="div8-1">
+                <span class="div8-1-text1">成为我们的志愿者</span><br>
+                <span class="div8-1-text2">新世界的大家庭需要每一个人的加入,如果你够年轻,有梦想有激情</span><br>
+                <span class="div8-1-text3">那就不要在,快来加入我们,成为改变所有人生活的人</span><br>
+
+            </div>
+            <div class="div8-2">
+                <div class="div8-2-1">
+                    <div class="div8-left-top">
+                        <span class="left-top-text">新世界志愿者协议</span><br>
+                        <span class="left-top-text1">参加新世界志愿者的人员必须遵守中华人们共和国的相关法律规定</span>
+                    </div>
+                    <div class="div8-left-bottom">
+                        <span class="left-top-text">新世界志愿者协议</span><br>
+                        <span class="left-top-text1">参加新世界志愿者的人员必须遵守中华人们共和国的相关法律规定</span><br>
+                        <a class="left-top-text2" href="">更多条款</a>
+                    </div>
+                </div>
+                <div class="div8-2-2">
+                    <div class="input-1">
+                        <span class="input-text">姓名:</span>
+                        <input class="input1" type="text">
+                    </div>
+                    <div class="input-1">
+                        <span class="input-text">年龄:</span>
+                        <input class="input1" type="text">
+                    </div>
+                    <div class="input-1">
+                        <span class="input-text">联系:</span>
+                        <input class="input1" type="text">
+                    </div>
+                    <div class="input-1">
+                        <span class="input-text">地址:</span>
+                        <input class="input1" type="text">
+                    </div>
+
+                    <div class="div8-2-3">
+                        <input type="text" class="input2" >
+                    </div>
+                    <div class="div8-2-4">
+                        <a class="div-2-4-a" href="" >提交申请</a>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+        <div class="page-div9">
+            <div class="div9-1">
+                <span class="div9-1-text">联系我们</span><br>
+                <span class="div9-1-text1">为了更好的获取我们的产品咨询,您可以留下您的电子邮箱快捷订阅我们的产品咨询</span><br>
+                <span class="div9-1-text1">也可以通过以下任何方式关注我们</span>
+            </div>
+            <div class="div9-2">
+                <input class="div9-2-input" type="text">
+                <a class="div9-2-a" href="">提交</a>
+            </div>
+            <div class="div9-3">
+                <a class="div9-3-1" href=""></a>
+                <a class="div9-3-2" href=""></a>
+                <a class="div9-3-3" href=""></a>
+                <a class="div9-3-4" href=""></a>
+            </div>
+        </div>
+        <div class="div10-1">
+            <span class="div10-1-text1">@2016新世界</span>
+            <a class="div10-1-text2"  href="javascript:returnTop();">back&nbspto&nbsptop</a>
+        </div>
+           
+</div>
+
+	</div>
+
+</body>
+</html>
